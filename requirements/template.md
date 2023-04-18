@@ -1,5 +1,5 @@
 # Use case: [use case name]
-#
+
 ## ID Number: [use case id] 
 
 ## Primary Actor(s): [actors]
@@ -10,7 +10,9 @@
 [description of what this use case is supposed to do]
 
 ## Priority
-- [ ] Vital [ ] Useful [ ] Desireble
+- [ ] Vital
+- [ ] Useful 
+- [ ] Desirable
 
 ## Dependencies
 [write other use cases' id to which this use case depends on]
