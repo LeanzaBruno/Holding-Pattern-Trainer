@@ -1,27 +1,38 @@
-# Use case: [use case name]
+# [Use case:](#use-case) [number] - [use case name]
 
-## ID Number: [use case id] 
+## [Primary Actor(s)](#primary-actors)
+[actors]
 
-## Primary Actor(s): [actors]
+## [Secundary Actor(s)](#secundary-actors)
+[secundary actors]
 
-## Secundary Actor(s): [secundary actors]
-
-## Description
+## [Description](#description)
 [description of what this use case is supposed to do]
 
-## Priority
+## [Priority](#priority) 
 - [ ] Vital
 - [ ] Useful 
 - [ ] Desirable
 
-## Dependencies
+## [Pre-conditions](#pre-conditions)
+
+## [Post-conditions](#post-conditions)
+
+## [Dependencies](#dependencies)
 [write other use cases' id to which this use case depends on]
 
-## Courses
-| Normal Course 			| Alternative Course 			|
-| --------------------------------	| ---------------------------------- 	|
-| 1. This use case starts when ... 	| 					|
-| 2. Step two. 				| 					|
-| 3. Step three. 			| 					|
-|                			| 3.1 Step one				|
-|                			| 3.1 Step two				|
+## [Flows](#flows)
+### [Normal flow](#normal-flow)
+1. Step one.
+2. Step two.
+3. Step three.
+
+### [Alternate flow](#alternate-flow)
+2.
+	1. Step one.
+	2. Step two.
+	3. Step three.
+3.
+	1. Step one.
+	2. Step two.
+	3. Step three.
