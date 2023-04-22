@@ -19,6 +19,7 @@ Every scenario includes:
 - Aircraft's position:
 	+ Radial,
 	+ Distance.
+	+ Flight level
 
 - Holding pattern configuration:
 	+ Standard or no standard,
@@ -31,7 +32,7 @@ Every scenario includes:
 - [ ] Desirable
 
 ## [Pre-conditions](#pre-conditions)
-Browser is open.
+None
 
 ## [Post-conditions](#post-conditions)
 Trainer mode is set.
@@ -44,9 +45,9 @@ None
 1. Use case starts at the beginning of the program or when user pushed the "Change mode" button.
 2. User chose one of the three modes.
 	1. If user choose **"All random"** mode, use case [all random mode](all-random-mode.md) is invoked.
-	2. If user choose **"Fixed holding pattern"** mode, use case [fixed holding pattern mode](fixed-holding-pattern-mode.md) is invoked.
+	2. If user choose **"Fixed holding pattern"** mode, use case [fixed holding pattern mode](fixed-holding-pattern-configuration-mode.md) is invoked.
 	3. If user choose **"Set specific scenario"** mode, use case [specific scenario](specific-scenario-mode.md) is invoked.
 3. Use case finishes.
 
 ### [Alternate flow](#alternate-flow)
-Use case finishes when user closes the trainer tab or b**rowser.
+Use case finishes when user closes the trainer tab or browser at any time of the program execution.
