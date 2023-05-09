@@ -1,0 +1,22 @@
+{
+  "name": "holdingpatterntrainer",
+  "version": "1.0.0",
+  "description": "Un entrenador de entradas y salidas de patrones de espera hecho en html, css y js.",
+  "main": "script.js",
+  "scripts": {
+    "sass": "sass --watch scss/:css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeanzaBruno/Holding-Pattern-Trainer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeanzaBruno/Holding-Pattern-Trainer/issues"
+  },
+  "homepage": "https://github.com/LeanzaBruno/Holding-Pattern-Trainer#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}
