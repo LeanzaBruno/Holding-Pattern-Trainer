@@ -7,13 +7,19 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <title>Holding pattern trainer</title>
 </head>
-<body class="vh-100">
+<body class="vh-100 bg-dark">
     <main class="container h-100 d-flex justify-content-center align-items-center">
 
-        <div class="row" id="main-menu">
-            <button class="col btn fs-3 m-3 btn-primary" id="btn-all-random">ALL RANDOM</button>
-            <button class="col btn fs-3 m-3 btn-primary" id="btn-fixed-holding-pattern">FIXED HOLDING PATTERN</button>
-            <button class="col btn fs-3 m-3 btn-primary" id="btn-set-scenario">SET SCENARIO</button>
+        <div id="main-menu">
+            <div class="row mb-4">
+                <h1 class="col text-center display-5 text-secondary">Select mode</h1>
+            </div>
+            <div class="row">
+                <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-all-random">RANDOM SCENARIOS</button>
+                <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-fixed-holding-pattern">FIXED HOLDING PATTERN</button>
+                <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-set-scenario">SPECIFIC SCENARIO</button>
+            </div>
+
         </div>
 
 
