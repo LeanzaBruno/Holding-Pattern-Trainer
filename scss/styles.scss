@@ -1,8 +1,7 @@
+
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 * {
@@ -10,3 +9,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#vor{
+    width: 32px;
+    height: 32px;
+}
+
+#aircraft{
+    width: 32px;
+    height: 32px;
+}

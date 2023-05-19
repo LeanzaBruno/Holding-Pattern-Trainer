@@ -7,67 +7,77 @@
     <link rel="stylesheet" href="css/styles.css"/>
     <title>Holding pattern trainer</title>
 </head>
-<body class="vh-100 bg-dark">
-    <main class="container h-100 d-flex justify-content-center align-items-center">
+<body class="container vh-100 bg-dark d-flex justify-content-center align-items-center">
 
-        <div id="main-menu">
+        <main id="main-menu">
             <div class="row mb-4">
                 <h1 class="col text-center display-5 text-secondary">Select mode</h1>
             </div>
             <div class="row">
                 <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-all-random">RANDOM SCENARIOS</button>
                 <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-fixed-holding-pattern">FIXED HOLDING PATTERN</button>
-                <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" id="btn-set-scenario">SPECIFIC SCENARIO</button>
-            </div>
+            <button class="col btn fs-4 m-3 btn-outline-primary rounded-5" data-bs-toggle="modal" data-bs-target="#specificScenarioModal">SPECIFIC SCENARIO</button>
+        </main>
 
-        </div>
+        <!--Specific scenario configuration modal-->
+        <div class="modal fade" id="specificScenarioModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-3">Configurate scenario</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
 
-
-        <div hidden id="form-container" class="w-50 border border-secondary rounded-3 fs-5">
-            <form>
-                <aside class="d-flex justify-content-end">
-                    <input type="image" class="mt-1 me-1 ms-auto" id="btn-cancel" src="img/cancel.png" style="width: 30px; height: 30px; margin-bottom: -50px;"/>
-                </aside>
-
-                <h3 class="fs-2 mt-3 ms-auto text-center">Holding pattern</h3>
-
-                <div class="m-3">
-                    <div class="d-flex">
-                        <div class="input-group">
-                            <label class="input-group-text" for="in-bound-radial">Inbound radial</label>
-                            <input type="number" min="0" max="359" class="form-control text-center" id="in-bound-radial">
-                        </div>
-
-                        <div class="form-check form-switch">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" role="switch" id="type" checked>
-                                <label class="form-check-label" for="type">Standard</label>
+                    <form class="modal-body needs-validation" id="holding-pattern-form" novalidate>
+                        <h2 class="fs-4 text-center mb-3">Holding pattern</h2>
+                        <div class="input-group mb-3">
+                            <label class="col-4 input-group-text text-start" for="inbound-radial">Inbound radial</label>
+                            <input type="number" maxlength="3" min="0" max="359" class="form-control text-center" id="inbound-radial" required>
+                            <div class="invalid-feedback">
+                                Please, enter a radial between 0 and 359
                             </div>
                         </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label mb-0">Standard pattern?</label>
+
+                            <div class="d-flex align-items-start me-1">
+                                <label class="form-check-label me-2" for="type">No</label>
+                                <div class="form-check form-switch">
+                                    <label class="form-check-label" for="type">Yes</label>
+                                    <input class="form-check-input" type="checkbox" role="switch" id="is-standard" checked>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="fs-4 text-center mt-3 mb-1">Aircraft's position</h2>
+                        <div class="input-group mb-3">
+                            <label class="col-4 input-group-text text-center" for="aircraft-radial">Radial</label>
+                            <input type="number" maxlength="3" min="0" max="359" class="form-control text-center" id="aircraft-radial" required>
+                            <div class="invalid-feedback">
+                                Please, enter a radial between 0 and 359
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label class="col-4 input-group-text" for="aircraft-distance">Distance (nm)</label>
+                            <input type="number" min="0" maxlength="2" class="form-control text-center" id="aircraft-distance" required>
+                            <div class="invalid-feedback">
+                                Please, enter a distance
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" form="holding-pattern-form" class="btn btn-primary" id="load-scenario-btn">Load scenario</button>
                     </div>
                 </div>
-
-                
-                <hr class="ms-0 me-0 p-0">
-
-                <h3 class="fs-2 text-center">Aircraft's position</h3>
-
-                <div class="m-3">
-                    <label class="form-label" for="aircraft-radial">Aircraft's radial</label>
-                    <input type="number" class="form-control text-center" id="aircraft-radial">
-                </div>
-
-                <div class="m-3">
-                    <label class="form-label" for="distance">Distance</label>
-                    <input type="number" class="form-control text-center" id="distance">
-                </div>
-
-                <div class="row m-3">
-                    <button class="btn btn-primary" type="btn-submit">SET</button>
-                </div>
-        </form>
+            </div>
         </div>
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/trainer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
